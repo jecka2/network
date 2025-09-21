@@ -41,7 +41,7 @@
        group: root
        mode: 0644
 
-    - name: Description
+    - name: install traceroute
       ansible.builtin.apt:
        name: traceroute
        update_cache: yes

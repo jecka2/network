@@ -141,3 +141,22 @@ vagrant up
 ```
 
 
+Пытаемся с центрального роутера "дойти"  до 8.8.8.8 
+
+```bash
+jecka   ~/Documents/git/network  ssh vagrant@192.168.50.11 -i .vagrant/machines/centralRouter/virtualbox/private_key
+Last login: Sun Sep 21 13:56:54 2025 from 192.168.50.1
+vagrant@centralRouter:~$ traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  192.168.255.1 (192.168.255.1)  0.455 ms  0.507 ms  0.492 ms
+ 2  10.0.2.2 (10.0.2.2)  1.429 ms  1.405 ms  1.341 ms
+ 3  10.78.16.1 (10.78.16.1)  2.883 ms  2.831 ms  2.813 ms
+ 4  не палимся).pool.sknt.ru (и тут тоже)  2.759 ms  2.983 ms  3.365 ms
+ 5  Router.sknt.ru (93.100.0.132)  2.545 ms  2.482 ms  2.461 ms
+ 6  SEL-CORE (185.37.128.106)  2.353 ms  4.696 ms  4.570 ms
+ 7  * * *
+ 8  * * *
+ 9  72.14.216.110 (72.14.216.110)  2.571 ms  2.368 ms  2.132 ms
+10  dns.google (8.8.8.8)  5.813 ms  5.588 ms  5.204 ms
+```
+
